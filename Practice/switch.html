@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Statements</title>
+</head>
+
+<body>
+
+    <select id="countries" onchange="getStates()">
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Pune">Pune</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Delhi">Delhi</option>
+    </select>
+
+    <h1 id="Places">Places</h1>
+
+    <script>
+        getStates();
+        function getStates() {
+            var country = document.getElementById("countries").value;
+            console.log(country);
+            switch (country) {
+                case "Hyderabad": document.getElementById("Places").innerHTML = "Hyderabad"; break;
+                case "Bangalore": document.getElementById("Places").innerHTML = "Bangalore"; break;
+                case "Pune": document.getElementById("Places").innerHTML = "Pune"; break;
+                case "Mumbai": document.getElementById("Places").innerHTML = "Mumbai"; break;
+                case "Delhi": document.getElementById("Places").innerHTML = "Delhi"; break;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

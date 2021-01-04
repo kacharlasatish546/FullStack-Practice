@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic List</title>
+</head>
+
+<body>
+
+    <select id="select State" onchange="displayCities()">
+        <option value="Select">Select</option>
+    </select>
+
+    <select id="select City">
+        <option value="Select">Select</option>
+    </select>
+
+    <script>
+        var select = document.getElementById("select State");
+        var array = ["AP", "KA", "MP", "KR", "GT"];
+
+        for (var i = 0; i < array.length; i++) {
+            var option = document.createElement("option");
+            var txt = document.createTextNode(array[i]);
+            option.appendChild(txt);
+            option.setAttribute("value", array[i]);
+            select.insertBefore(option, select.lastChild);
+        }
+
+        function displayCities() {
+
+            var selectState = document.getElementById("select State");
+            var selectCity = document.getElementById("select City");
+            selectCity.length = 0;
+            switch (selectState.value) {
+                case "AP":
+                    cities = ["Hyderabad", "Ananthapur", "Vizag"];
+                    break;
+                case "KA":
+                    cities = ["Bangalore", "Mangalore", "Thumkur"];
+                    break;
+            }
+            for (var i = 0; i < cities.length; i++) {
+                event.preventDefault();
+                var soption = document.createElement("option");
+                soption.remove();
+                soption.append(document.createTextNode(cities[i]));
+                soption.setAttribute("value", cities[i]);
+                selectCity.insertBefore(soption, selectCity.lastChild);
+            }
+        }
+
+
+
+    </script>
+
+    <!-- crete a select tag
+    create arrays
+    loop array
+        create options element
+        create a node for storing the array list data
+        append the node to the options
+        set the value to the option element
+        insert the option to the select tag before last child -->
+
+</body>
+
+</html>

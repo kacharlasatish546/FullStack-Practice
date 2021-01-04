@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<body>
+
+    <input type="text" name="" id="feild1_id" placeholder="Number1">
+    <input type="text" name="" id="feild2_id" placeholder="Number2"><br><br>
+    <button type="button" onclick="add()">Add</button>
+    <button type="button" onclick="sub()">Sub</button>
+    <br><br>
+    <span id="value">Total</span>
+
+    <script>
+
+        function add() {
+            var num1 = document.getElementById("feild1_id").value;
+            var num2 = document.getElementById("feild2_id").value;
+            var sum;
+            sum = parseInt(num1) + parseInt(num2);
+            document.getElementById("value").innerHTML = "Total (Number1 + Numer2) " + sum;
+
+        }
+
+        function sub() {
+            var num1 = document.getElementById("feild1_id").value;
+            var num2 = document.getElementById("feild2_id").value;
+            var diff;
+            diff = parseInt(num1) - parseInt(num2);
+            document.getElementById("value").innerHTML = "Total (Number1 - Numer2) " + diff;
+        }
+
+    </script>
+
+</body>
+
+</html>

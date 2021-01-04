@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Lists</title>
+
+    <script>
+
+        function populateCities(s1, s2) {
+            var s1 = document.getElementById(s1);
+            var s2 = document.getElementById(s2);
+            s2.innerHTML = "";
+            switch (s1.value) {
+                case "ap":
+                    var optionArray = ["|", "hyd|Hyderabad", "atp|Ananthapur", "vz|Vizag"]; break;
+                case "ka":
+                    var optionArray = ["|", "bg|Bangalore", "mg|Mangalore", "tk|humkur"]; break;
+                case "mh":
+                    var optionArray = ["|", "mb|Mumbai", "pn|Pune", "sd|Shiridi"]; break;
+            }
+
+            for (var option in optionArray) {
+                var pair = optionArray[option].split("|");
+                var newOption = document.createElement("option");
+                newOption.value = pair[0];
+                newOption.innerHTML = pair[1];
+                s2.options.add(newOption);
+            }
+        }
+
+        function populatePlaces(s2) {
+            var s2 = document.getElementById(s2).value;
+            console.log("City : " + s2);
+            document.getElementById("place_header").innerHTML = "Places to see in " + s2 + " City";
+            switch (s2) {
+                case "hyd":
+                    document.getElementById("places").innerHTML = "Golconda, Charminar, NTR Gardens";
+                    break;
+                case "atp":
+                    document.getElementById("places").innerHTML = "Iskon Temple, Bustand, Railway Station";
+                    break;
+                case "vz":
+                    document.getElementById("places").innerHTML = "Beach, Statue, Araku valley";
+                    break;
+                default:
+                    document.getElementById("places").innerHTML = "No Places to Visit";
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <h2>Choose your State and City:</h2>
+    <hr>
+    Choose State:
+    <select name="select1" id="select1" onchange="populateCities(this.id,'select2')">
+        <option value=""></option>
+        <option value="ap">Andhra Pradesh</option>
+        <option value="ka">Karnataka</option>
+        <option value="mh">Maharastra</option>
+    </select>
+    <hr>
+    Choose City:
+    <select name="select2" id="select2" onchange="populatePlaces('select2')"></select>
+    <hr>
+    <h3 id="place_header"></h3>
+    <Span id="places" style="color: green; font-size: 60px; border: none; background-color: wheat;"></Span>
+
+
+</body>
+
+</html>

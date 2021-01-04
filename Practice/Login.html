@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+
+    <form>
+        <label>Username</label> <input id="username" type="text"><br><br>
+        <label>Password</label> <input id="password" type="text"><br><br>
+        <button type="button" onclick="validateLogin()">Submit</button>
+    </form>
+
+    <script>
+
+        function validateLogin() {
+            var dbUsername = "Ravi";
+            var dbPassword = "Ravi123";
+            var user = document.getElementById("username").value;
+            var pwd = document.getElementById("password").value;
+
+            (user == dbUsername && pwd == dbPassword ? alert("Login Successfull") : alert("Login Failed"));
+
+             // var usercheck = user == "Ravi" ? true: false;
+            // var passwordCheck = pwd == "Ravi123" ? true : false;
+
+            // usercheck = passwordCheck ? alert("Login Successfull") : alert("Login Failed");
+        }
+    </script>
+</body>
+
+
+</html>

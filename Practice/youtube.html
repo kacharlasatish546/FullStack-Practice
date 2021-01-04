@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Like and Dislike</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+</head>
+
+<body>
+
+    <i class="fa fa-thumbs-up" onclick="thumbsup()" style="font-size: 200px; color: grey;"></i> <span
+        id="thumbsup_id">0</span>
+    &nbsp&nbsp&nbsp
+    <i class="fa fa-thumbs-down" onclick="thumbsdown()" style="font-size: 200px; color: grey;"></i> <span
+        id="thumbsdown_id">0</span>
+    &nbsp&nbsp&nbsp
+
+    <script>
+
+        var like = 0;
+        var dislike = 0;
+
+        function thumbsup() {
+            like = like + 1;
+            document.getElementById("thumbsup_id").innerHTML = like;
+        }
+
+        function thumbsdown() {
+            dislike = dislike + 1;
+            document.getElementById("thumbsdown_id").innerHTML = dislike;
+        }
+
+    </script>
+
+</body>
+
+</html>

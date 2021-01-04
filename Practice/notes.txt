@@ -1,0 +1,28 @@
+algorith for Implement/Resolve Like problem
+
+1. Get UI/UX design
+2. Get the Icons(Thumsup and Thums down)
+3. Implement HTML Layout
+4. Apply CSS design
+5. Make the Image Clickable
+6. On CLick Increment the count by one
+7. display Success message popup
+8. Add HTML and CSS to success message popup
+9. disappear the popup after 5 seconds
+
+Implement like and displike  where user can do one like an one displike.
+1. get the thusup and thumsdown Icons
+2. make the icons Clickable
+3. assign default values to icons on Clickable
+4. create one global variable
+5. if liked decrease dislike by one and increase like by one
+6. if disliked decrase like by one and increase displike by one
+7. resctric the inc/dec/ if value is equal to 0
+
+1. Implement like and dislike where a user can do one like or one dislike.
+
+  
+ 2. Implement a simple login page, ask the user to enter username and password and 
+  once the user submits the button, then display the username and password on the UI.
+
+  
