@@ -116,7 +116,7 @@
             while (index < itemsList.length) {
                 var item = itemsList[index];
                 itemsListElm.innerHTML += "<li>" + item.name + " : " + 
-                    "<Strong>"+item.price +"</Strong>"+ "<span>" + item.rating + "*</span>" + "<br><img src='" + item.image + "'>" + "</li>";
+                    "<Strong>"+item.price +"</Strong>"+ "<span>" + item.rating + "*</span>" + "<br><img src='" + item.image + "' alt='Car'>" + "</li>";
                 index++;
             }
         }
@@ -129,7 +129,7 @@
                 var item = itemsList[index];
                 console.log(item.name + " Selected Car : " + selectedCar);
                 if (selectedCar == item.name) {
-                    itemsListElm.innerHTML += "<li>" + item.name + " : " + item.price + "<span>" + item.rating + "*</span>" + "<br><img src='" + item.image + "'>" + "</li>";
+                    itemsListElm.innerHTML += "<li>" + item.name + " : " + item.price + "<span>" + item.rating + "*</span>" + "<br><img src='" + item.image + "' alt='Car'>" + "</li>";
                     break;
                 }
                 if (selectedCar == "All Cars") {
