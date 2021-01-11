@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Function Example</title>
+</head>
+
+<body>
+
+    <form>
+        <input type="text" name="mobile_number" id="mobile_number" placeholder="Mobile Number" size="20">
+        <button onclick="sendOTP()">Send OTP</button><br><br>
+        <input type="password" name="password" id="password" placeholder="password" size="20"><br><br>
+        <input type="text" name="otp" id="otp" placeholder="OTP" size="20"><br><br>
+        <button onclick="validateOTP()">Submit</button>
+    </form>
+
+    <script>
+        function sendOTP() {
+            event.preventDefault();
+            var mobileNumber = document.getElementById("mobile_number").value;
+            if (mobileNumber == "8686466739") {
+                alert("OTP : 123");
+            } else {
+                alert("Invalid Mobile Number");
+            }
+        }
+
+        function validateOTP() {
+            var password = document.getElementById("password").value;
+            var otp = document.getElementById("otp").value;
+            if (password == "abc" && otp == "123") {
+                redirect(true);
+            } else {
+                redirect(false);
+            }
+        }
+
+        var redirect = function (isOTPValid) {
+            event.preventDefault();
+            console.log("Inside redirect");
+            if (isOTPValid == true) {
+                console.log("isOTPValid : " + isOTPValid);
+                window.location.href = "home.html";
+                redirect = null;
+            } else {
+                alert("Invalid Credential");
+                redirect = null;
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -26,3 +26,13 @@ Implement like and displike  where user can do one like an one displike.
   once the user submits the button, then display the username and password on the UI.
 
   
+
+  user should be able to sot the List based on the user selection [Low to High, High to Low]
+
+  
+  display the data from JSON and use do-while to display the results
+
+  Create JSON file with data
+  Initialize the JSON file
+  Read the data from the JSON file and store in JSON object 
+  display the data from JSON object

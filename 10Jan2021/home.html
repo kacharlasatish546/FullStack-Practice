@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+<style>
+    /* /* h1{
+        background-color: aqua;
+        display: inline-block;
+        margin: 20px; 
+    } */
+
+    body {
+            background: #f0f2f5;
+            color: #1c1e21;
+        }
+
+    h1 {
+            color: blue;
+            text-align: left;
+            font-size: 32px;
+            display: inline-block;
+        }
+
+        p {
+            color: black;
+            font-size: 32px;
+            text-align: center;
+        }
+    
+</style>
+
+</head>
+
+<body>
+    
+    <h1 id="user" style="color: brown;"></h1>&nbsp
+    <h1>Welcome to Car Palace</h1>
+<br>
+<br>
+    <a href="carsList.html" style="font-size: 43px; text-decoration: none;">Cars List</a>
+
+    <script>
+        var username;
+        if (typeof (Storage) != undefined) {
+            username = localStorage.getItem("username");
+            document.getElementById("user").innerHTML = username.toUpperCase()+"";
+        } else {
+            console.log("LocalStorage is not supported in this browser");
+        }
+    </script>
+
+</body>
+
+</html>

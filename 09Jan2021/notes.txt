@@ -1,0 +1,7 @@
+PS : Validate user mobile and send OTP, then validate password and OTP to successfully Login
+
+Algorithm
+1. Create Mobile, Passord and OTP fields
+2. Create function to validate Mobile number and Send OTP as an alert
+3. Create a function to validate password and validate OTP
+4. Create anonymous function to successfull login or throw error invalid Credentials

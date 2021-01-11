@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+        body {
+            background: #f0f2f5;
+            color: #1c1e21;
+        }
+
+        div {
+            background-color: white;
+            display: inline-block;
+            border: none;
+            margin: 0px 20px 20px 500px;
+            padding: 10px;
+            height: 300px;
+            width: 400px;
+            border-radius: 10px;
+        }
+
+        .inputbtn {
+            background-color: #1877f2;
+            border: none;
+            border-radius: 6px;
+            font-size: 20px;
+            line-height: 48px;
+            padding: 0 16px;
+            width: 400px;
+        }
+
+        .inputtxt {
+            border-radius: 6px;
+            font-size: 20px;
+            line-height: 48px;
+            padding: 0 16px;
+            width: 365px;
+        }
+
+        a {
+            color: #1877f2;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        h1 {
+            color: blue;
+            text-align: center;
+            font-size: 42px;
+        }
+
+        p {
+            color: black;
+            font-size: 32px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Car Palace</h1>
+    <p>Car Palace helps you find <br>
+        the best Car in your life.</p>
+    <div>
+        <input type="text" id="username" placeholder="Username" class="inputtxt"><br><br>
+        <input type="password" id="password" placeholder="Password" class="inputtxt"><br><br>
+        <input type="submit" value="Login" onclick="login()" class="inputbtn">
+        <hr>
+        <a href="">Forgotten password?</a><br>
+        <a href="registration.html">Create New Account</a>
+    </div>
+    <script>
+        var username;
+        var password;
+        var email;
+        var mobilenumber;
+        if (typeof (localStorage) != undefined) {
+            username = localStorage.getItem("username");
+            password = localStorage.getItem("password");
+            email = localStorage.getItem("email");
+            mobilenumber = localStorage.getItem("mobilenumber");
+        } else {
+            console.log("Local Store is not supperoted in this browser");
+        }
+
+        function login() {
+            var uName = document.getElementById("username").value;
+            var uPassword = document.getElementById("password").value;
+            //if(uName != "" || uPassword != ""){
+            var result = (uName == username && uPassword == password) ? true : false;
+            //}
+            // else{
+            //     alert("Invalid Credentials");
+            // }
+
+
+            if (result == false || result == undefined) {
+                alert("Invalid Credentials");
+            } else {
+                window.location.href = "home.html";
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

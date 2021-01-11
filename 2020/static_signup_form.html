@@ -1,0 +1,134 @@
+<html>
+
+<head>
+	<style>
+		#myid {
+			text-align: center;
+			color: grey;
+			text-decoration: underline;
+			text-shadow: 3px 5px yellow;
+			font-size: 30px;
+			font-family: Arial, sans-serif;
+		}
+
+		div {
+			background-color: powderblue;
+			width: 450px;
+			height: 700px;
+			border: 4px solid orange;
+			border-radius: 8px;
+			margin: 10px 50px 10px 400px;
+			padding: 20px 20px 20px 30px;
+
+
+		}
+
+		table {
+			border-spacing: 8px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1 id="myid">SIGN UP FORM</h1>
+	<div>
+		<table>
+			<form method="post" autocomplete="on">
+				<tr>
+					<td>
+						<label for="fname">FIRST NAME</label>
+					</td>
+					<td><input type="text" id="fname" name="fname"></td>
+				</tr>
+				<tr>
+					<td><label for="lname">LAST NAME</label></td>
+					<td><input type="text" id="lname" name="lname"></td>
+				</tr>
+				<tr>
+					<td>gender</td>
+					<td>
+						<input type="radio" id="male" name="gender" value="male">
+						<label for="male">MALE</label>
+						<input type="radio" id="female" name="gender" value="female">
+						<label for="female">FEMALE</label>
+						<input type="radio" id="other" name="gender" value="other">
+						<label for="other">OTHER</label>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="nationality">NATIONALITY</label></td>
+					<td><input type="text" id="nationality" name="nationality"></td>
+				</tr>
+				<tr>
+					<td><label for="mobileno">MOBILENO</label></td>
+					<td><input type="number" id="mobileno" name="mobileno"></td>
+				</tr>
+				<tr>
+					<td><label for="email">EMAIL</label></td>
+					<td><input type="email" id="email" name="email"></td>
+				</tr>
+				<tr>
+					<td><label for="address">ADDRESS</label></td>
+					<td><textarea name="Addressbox" id="addressbox" rows="5" cols="22"></textarea></td>
+				</tr>
+				<tr>
+					<td><label for="uname">USERNAME</label></td>
+					<td><input type="text" id="username" name="username"></td>
+				</tr>
+				<tr>
+					<td><label for="password">PASSWORD</label></td>
+					<td><input type="password" id="password" name="password"></td>
+				</tr>
+				<tr>
+					<td><label for="retypepassword">RETYPEPASSWORD</label></td>
+					<td><input type="password" id="retypepassword" name="retypepassword"></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<input type="submit" value="Submit" onclick="displayDetails()">
+						<input type="reset">
+					</td>
+				</tr>
+			</form>
+		</table>
+	</div>
+
+	<span id="result"></span>
+	<script>
+
+		function gender_display() {
+			var ele = document.getElementsByName('gender');
+			for (i = 0; i < ele.length; i++) {
+				if (ele[i].checked)
+					gender = ele[i].value;
+				console.log(gender);
+				return gender;
+			}
+		}
+
+		function displayDetails() {
+			var fname = document.getElementById("fname").value;
+			var lname = document.getElementById("lname").value;
+			var gender = gender_display();
+			var nationality = document.getElementById("nationality").value;
+			var mobileno = document.getElementById("mobileno").value;
+			var email = document.getElementById("email").value;
+			var addressbox = document.getElementById("addressbox").value;
+			var username = document.getElementById("username").value;
+			var password = document.getElementById("password").value;
+
+			// document.getElementById("result").innerHTML=fname + " " + lname;
+			document.writeln(fname + " " + lname);
+			document.writeln(gender);
+			document.writeln(nationality);
+			document.writeln(mobileno);
+			document.writeln(email);
+			document.writeln(addressbox);
+			document.writeln(username);
+			document.write(password);
+		}
+
+	</script>
+</body>
+
+</html>

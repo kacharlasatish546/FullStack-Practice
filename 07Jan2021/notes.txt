@@ -1,0 +1,8 @@
+algorithm 
+ Display the Product in a sorting order
+
+ create 2 select statements <Sort By>, <LH/HL> (done)
+ Create a switch statement to Sort BY Rating or Price and High to Low
+ get the values selected by user for sorting
+ write logic to Sort
+ display the Sorted products

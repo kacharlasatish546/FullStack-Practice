@@ -1,0 +1,21 @@
+Algorithm
+
+1. Create a Registration page (done)
+
+2. Store the Registered user details in Local Storage
+    1. get all the User Input details from UI and Store in to variable (done)
+    2. Create Local Storage and store user details in Local Storage
+
+3. Create a Login page
+
+4. Validate the Login Credentials with the Registered Credentials
+
+5. Login if true else throw Invalid Credentials
+
+
+
+
+
+
+
+

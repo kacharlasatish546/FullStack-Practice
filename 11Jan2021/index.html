@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <form>
+        Name <input type="text" name="name" id="name">
+        Brand <input type="text" name="brand" id="brand">
+        Price <input type="text" name="price" id="price">
+        <button onclick="displayDetails()">Submit</button>
+    </form>
+
+    <script>
+        function Function(name, brand, price) {
+            this.ename = name;
+            this.ebrand = brand;
+            this.eprice = price;
+        }
+
+        function displayDetails() {
+            event.preventDefault();
+            var lname = document.getElementById("name").value;
+            var lbrand = document.getElementById("brand").value;
+            var lprice = document.getElementById("price").value;
+            var e1 = new Function(lname, lbrand, lprice);
+
+            console.log(e1);
+            
+        }
+
+    </script>
+
+</body>
+
+</html>

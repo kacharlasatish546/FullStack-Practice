@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+
+    <style>
+        body {
+            background: #f0f2f5;
+            color: #1c1e21;
+        }
+
+        div {
+            background-color: white;
+            display: inline-block;
+            border: none;
+            margin: 20px 480px;
+            padding: 10px;
+            height: 400px;
+            width: 400px;
+            border-radius: 10px;
+        }
+
+        /* td {
+            border-radius: 6px;
+            font-size: 20px;
+            line-height: 48px;
+            padding: 0 16px;
+            width: 365px;
+        } */
+
+        input {
+            border-radius: 6px;
+            font-size: 20px;
+            line-height: 48px;
+            padding: 0 16px;
+            width: 365px;
+        }
+
+        .inputbtn {
+            background-color: #1877f2;
+            border: none;
+            border-radius: 6px;
+            font-size: 20px;
+            line-height: 30px;
+            padding: 0 16px;
+            width: 194px;
+            height: 50px;
+        }
+    </style>
+    
+
+</head>
+
+<body>
+    <h1 style="text-align: center;">Registration Form</h1>
+    <div>
+        <table>
+            <form action="login.html" method="post">
+                <input type="text" name="username" id="username" placeholder="Username"><br><br>
+                <input type="password" name="password" id="password" placeholder="Password"><br><br>
+                <input type="text" name="email" id="email" placeholder="Email"><br><br>
+                <input type="number" name="mobilenumber" id="mobilenumber" placeholder="Mobile Number"><br><br>
+                <input type="submit" placeholder="Submit" class="inputbtn" onclick="storeUserDetails()">&nbsp&nbsp
+                <input type="reset" placeholder="Reset" class="inputbtn">
+            </form>
+        </table>
+    </div>
+
+
+    <script>
+
+        function storeUserDetails() {
+            event.preventDefault();
+            console.log("Inside Store User Details");
+
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var email = document.getElementById("email").value;
+            var mobilenumber = document.getElementById("mobilenumber").value;
+
+            if (typeof (Storage) != undefined) {
+                localStorage.setItem("username", username);
+                localStorage.setItem("password", password);
+                localStorage.setItem("email", email);
+                localStorage.setItem("mobilenumber", mobilenumber);
+                window.location.href = "login.html";
+            } else {
+                console.log("Local Storage is not supported in this browser");
+            }
+            //displayUserDetails();
+        }
+
+        function displayUserDetails() {
+            if (typeof (Storage) != undefined) {
+                console.log(localStorage.getItem("username"));
+                console.log(localStorage.getItem("password"));
+                console.log(localStorage.getItem("email"));
+                console.log(localStorage.getItem("mobilenumber"));
+            } else {
+                console.log("Local Stoage is not supported in this browser");
+            }
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
