@@ -1,0 +1,17 @@
+input{
+    display: block;
+    height: 20px;
+    width: 400px;
+}
+
+.center{
+    display: inline-block;
+    background-color:rgb(195, 235, 241);
+    padding: 20px;
+    height: 250px;
+    align-content: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 400px;
+    margin-top: 20px;
+}

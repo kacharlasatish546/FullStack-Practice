@@ -1,0 +1,12 @@
+.greyBG{
+    background-color: rgb(192, 190, 190);
+    height: 35px;
+}
+
+.spaces{
+    margin: 20px;
+}
+
+.textdecorationnone{
+text-decoration: none;
+}
